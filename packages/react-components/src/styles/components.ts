@@ -19,7 +19,7 @@ export default (_theme: ThemeDef): string => `
 
     &.error {
       background: var(--bg-input-error);
-      border-color: #e0b4b4;
+      border-color: #50C878;
     }
 
     &.monospace {

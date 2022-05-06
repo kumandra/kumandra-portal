@@ -7,7 +7,6 @@ import type { LinkOption } from './types';
 import { defaultT } from '../util';
 import { createCustom, createDev, createOwn } from './development';
 import { createProduction } from './production';
-import { createKusamaRelay, createPolkadotRelay } from './productionRelays';
 import { createTesting } from './testing';
 import { createRococoRelay, createWestendRelay } from './testingRelays';
 
@@ -20,52 +19,18 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.polkadot.relay', 'Polkadot & parachains', { ns: 'apps-config' }),
+      text: t('rpc.header.kumandra.relay', 'Kumandra Testnet', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
-    ...createPolkadotRelay(t, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      text: t('rpc.header.kusama.relay', 'Kusama & parachains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createKusamaRelay(t, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.westend.relay', 'Test Westend & parachains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createWestendRelay(t, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      text: t('rpc.header.rococo.relay', 'Test Rococo & parachains', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createRococoRelay(t, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      isSpaced: true,
-      text: t('rpc.header.live', 'Live networks', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
-    ...createProduction(t, firstOnly, withSort),
-    {
-      isDisabled: false,
-      isHeader: true,
-      text: t('rpc.header.test', 'Test networks', { ns: 'apps-config' }),
-      textBy: '',
-      value: ''
-    },
+    // ...createProduction(t, firstOnly, withSort),
+    // {
+    //   isDisabled: false,
+    //   isHeader: true,
+    //   text: t('rpc.header.test', 'Test networks', { ns: 'apps-config' }),
+    //   textBy: '',
+    //   value: ''
+    // },
     ...createTesting(t, firstOnly, withSort),
     {
       isDevelopment: true,

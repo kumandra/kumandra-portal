@@ -19,9 +19,9 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     // alphabetical based on chain name, e.g. Arcadia, Beresheet, ...
     {
       info: 'kumandra',
-      text: t('rpc.test.kumandra', 'Kumandra Testnet', { ns: 'apps-config' }),
+      text: t('api.kumandra', 'Kumandra Testnet', { ns: 'apps-config' }),
       providers: {
-        'Kumandra Network': 'wss://rpc-test.kumandra.network'
+        'Kumandra Network': 'wss://api.kumandra.org'
       }
     }
   ], firstOnly, withSort);

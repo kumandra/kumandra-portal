@@ -6,9 +6,7 @@ import type { LinkOption } from './types';
 
 import { defaultT } from '../util';
 import { createCustom, createDev, createOwn } from './development';
-import { createProduction } from './production';
 import { createTesting } from './testing';
-import { createRococoRelay, createWestendRelay } from './testingRelays';
 
 export { CUSTOM_ENDPOINT_KEY } from './development';
 
@@ -19,7 +17,7 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.kumandra.relay', 'Kumandra Testnet', { ns: 'apps-config' }),
+      text: t('api.kumandra.org', 'Kumandra Testnet', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },
@@ -37,7 +35,7 @@ export function createWsEndpoints (t: TFunction = defaultT, firstOnly = false, w
       isDisabled: false,
       isHeader: true,
       isSpaced: true,
-      text: t('rpc.header.dev', 'Development', { ns: 'apps-config' }),
+      text: t('api.kumandra.org', 'Development', { ns: 'apps-config' }),
       textBy: '',
       value: ''
     },

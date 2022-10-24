@@ -22,18 +22,15 @@ import { POLKADOT_GENESIS } from '../api/constants';
 //   value: The actual hosted secure websocket endpoint
 export function createPolkadot (t: TFunction): EndpointOption {
   return {
-    dnslink: 'polkadot',
+    dnslink: 'kumandra',
     genesisHash: POLKADOT_GENESIS,
     info: 'polkadot',
-    text: t('rpc.polkadot.parity', 'Polkadot', { ns: 'apps-config' }),
+    text: t('rpc.polkadot.parity', 'Kumandra', { ns: 'apps-config' }),
     providers: {
       // Parity: 'wss://rpc.polkadot.io',              // polkadot
-      Parity: 'wss://testnet-rpc0.cess.cloud/ws/',//'wss://testnet-rpc.cess.cloud/ws/',//'ws://106.15.44.155:9949/',//'wss://cess.today/rpc2-hacknet/ws/',
+      VitaminAir: 'wss://testnet-rpc0.kumandra.org/',
       // Parity: "ws://106.15.44.155:9947/",              // local
-      OnFinality: 'wss://polkadot.api.onfinality.io/public-ws',
-      'Patract Elara': 'wss://pub.elara.patract.io/polkadot',
-      // Dwellir: 'wss://polkadot-rpc.dwellir.com',
-      'light client': 'light://substrate-connect/polkadot'
+      'light client': 'light://substrate-connect/kumandra'
       // Pinknode: 'wss://rpc.pinknode.io/polkadot/explorer' // https://github.com/polkadot-js/apps/issues/5721
     },
     linked: [

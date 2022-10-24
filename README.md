@@ -5,7 +5,7 @@
 
 
 
-# Kumandra-Portal Introduction
+# Kumandra-Portal Introducation
 
 💘 https://testnet.kumandra.org/
 

@@ -1,4 +1,4 @@
-[![Substrate version](https://img.shields.io/badge/Substrate-3.0.0-blue?logo=Parity%20Substrate)](https://substrate.dev/) 
+[![Substrate version](https://img.shields.io/badge/Substrate-3.0.0-blue?logo=Parity%20Substrate)](https://substrate.dev/)
 [![polkadotjs](https://img.shields.io/badge/polkadot-js-orange?style=flat-square)](https://polkadot.js.org)
 [![maintainability](https://img.shields.io/codeclimate/maintainability-percentage/polkadot-js/apps?logo=code-climate&style=flat-square)](https://codeclimate.com/github/polkadot-js/apps)
 [![GitHub license](https://img.shields.io/badge/license-GPL3%2FApache2-blue)](#LICENSE)
@@ -84,31 +84,45 @@ To get started -
     ```bash
     $ yarn install
     ```
-5. Ready! Now you can launch the UI (assuming you have a local Polkadot Node running), via 
+5. Ready! Now you can launch the UI (assuming you have a local Polkadot Node running), via
     ```bash
     $ yarn run start
     ```
 6. Access the UI via [http://localhost:3000](http://localhost:3000)
 
-## Build & Deploy 
+## Build & Deploy
 
 1. Install the dependencies by running `yarn`:
     ```bash
     $ yarn install
     ```
 
- 2. Run build 
+ 2. Run build
     ```bash
     $ yarn run build:code:win # the dist files in /packages/apps/build
     ```
 
+
+## Run with Docker
+
+1. pull the image with `docker`:
+    ```bash
+    $ docker pull kumandra/kumandra-portal-explorer
+    ```
+
+ 2. Run docker
+    ```bash
+    $ docker run -d --restart unless-stopped --name kumandra-ui -p 80:80 kumandra/kumandra-portal-explorer
+    ```
+
+ 3. View it on your browser using [localhost:80](localhost:80)
 
 ## Browsers support
 
 Modern browsers.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png" alt="Opera" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Opera |
-| --------- | --------- | --------- | --------- | --------- | 
+| --------- | --------- | --------- | --------- | --------- |
 |IE11, Edge| last 2 versions| last 2 versions| last 2 versions| last 2 versions
 
 

@@ -35,7 +35,7 @@ function ChainImg ({ className = '', isInline, logo, onClick, withoutHl }: Props
       className={`${className}${(isEmpty && !withoutHl) ? ' highlight--bg' : ''}${isInline ? ' isInline' : ''}`}
       onClick={onClick}
       style={{background: "transparent", borderRadius: 0}}
-      src={require("./../../../assets/images/kumandra-logo.png")}
+      src={require("./../../../assets/images/kumandra-logo-test-2.jpg")}
     />
   );
 }

@@ -21,7 +21,7 @@ VERSION=$(cat package.json \
 echo "*** Building $NAME"
 docker build -t $NAME -f docker/Dockerfile .
 
-docker login -u $REPO -p $DOCKER_PASS
+# docker login -u $REPO -p $DOCKER_PASS
 
 echo "*** Tagging $REPO/$NAME"
 if [[ $VERSION != *"beta"* ]]; then

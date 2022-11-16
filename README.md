@@ -112,7 +112,7 @@ To get started -
 
  2. Run docker
     ```bash
-    $ docker run -d --restart unless-stopped --name kumandra-ui -p 80:80 kumandra/kumandra-portal-explorer
+    $ docker run -d --restart unless-stopped --name kumandra-ui -p 3000:80 kumandra/kumandra-portal-explorer
     ```
 
  3. View it on your browser using [localhost:80](localhost:80)
